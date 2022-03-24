@@ -5,8 +5,75 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="stylesheet" href="styles.css" />
-    <script src="script.js" defer></script>
+
     <title>Etch a Sketch</title>
   </head>
-  <body></body>
+  <body>
+    <header>
+      <nav>
+        <a href="https://github.com/tariksouabny/etch-a-sketch">
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/2111/2111432.png"
+            alt="GitHub Logo"
+        /></a>
+      </nav>
+      <div class="grid">
+        <div>
+          <h1>In Browser Etch-A-Sketch</h1>
+          <h4>Made With Javascript</h4>
+        </div>
+        <img
+          src="https://cdn-icons.flaticon.com/png/512/5859/premium/5859127.png?token=exp=1648114903~hmac=5350b49afb290a07a1c32a0b93a0790b"
+          alt="Picture of a pencil"
+        />
+        <h2>Made By Tarik Souabny</h2>
+      </div>
+    </header>
+    <section class="main-section">
+      <div class="top-controls">
+        <label for="color-picker">Color</label>
+        <input type="color" id="color-picker" />
+        <label for="slider">Size</label>
+        <input
+          type="range"
+          min="4"
+          ,
+          max="64"
+          value="5"
+          step="1"
+          oninput="outputUpdate(value)"
+          id="slider"
+        />
+        <output for="slider" id="size-output">5</output>
+      </div>
+      <div class="etch-a-sketch">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+      </div>
+    </section>
+    <script src="script.js"></script>
+  </body>
 </html>
