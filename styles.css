@@ -1,0 +1,35 @@
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  --icon-size: 10vw;
+}
+header {
+  min-height: 100vw;
+  max-height: 100vw;
+  background: #ffe457;
+}
+header * {
+  margin-left: 20px;
+}
+.icon {
+  min-width: var(--icon-size);
+  min-height: var(--icon-size);
+  max-width: var(--icon-size);
+  max-height: var(--icon-size);
+}
+
+header .flex {
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+  max-width: 35vw;
+  display: inline-block;
+  margin-right: 20vw;
+  margin-bottom: calc(60vh - var(--icon-size));
+}
