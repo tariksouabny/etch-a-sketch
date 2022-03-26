@@ -7,3 +7,16 @@ if (debug) {
     element.setAttribute("style", "outline: 2px solid red;")
   );
 }
+
+const grid = document.querySelector('.etch-a-sketch');
+const gridBGColor = '#cccccc'
+let clearGrid = () => {
+  grid.childNodes.forEach(
+    element => {
+      if (element.style){
+      element.style.backgroundColor = gridBGColor
+      }
+    }
+  )
+}
+
