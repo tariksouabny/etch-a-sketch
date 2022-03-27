@@ -1,6 +1,7 @@
 const debug = false;
 
 // Add  borders around all content for debugging
+
 const allElements = document.querySelectorAll("*");
 if (debug) {
   allElements.forEach((element) =>
@@ -18,13 +19,29 @@ let clearGrid = () => {
   });
 };
 
-let numberOfColsRows = 5;
-
 const slider = document.querySelector("#slider");
 slider.addEventListener("input", (e) => {
   numberOfColsRows = slider.value;
+  const output = document.querySelector("#size-output");
+  output.innerText = slider.value;
 });
 
 const changeNumRowsCols = (numRowsCols) => {
   clearGrid();
+  const etchASketchBox = document.querySelector(".etch-a-sketch");
+  // Remove all current elements in the grid
+  Array.from(etchASketchBox.children).forEach((child, index) => {
+    etchASketchBox.removeChild(child);
+  });
+  // Add all elements
+  for (let i = 0; i < numRowsCols * numRowsCols; i++) {
+    let el = document.createElement("div");
+    el.setAttribute("class", "box");
+    etchASketchBox.appendChild(el);
+  }
+  console.log(etchASketchBox);
+  etchASketchBox.setAttribute(
+    "style",
+    `grid-template-columns: repeat(${numRowsCols}, ${100 / numRowsCols}%)`
+  );
 };
