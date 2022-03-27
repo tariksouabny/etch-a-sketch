@@ -10,6 +10,12 @@ body {
   --icon-size: 10vw;
   --main-img-size: 25vw;
 }
+
+/* Prevent highlighting images */
+img::selection {
+  background: none;
+}
+
 nav {
   min-width: 100vw;
   max-width: 100vw;
