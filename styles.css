@@ -119,6 +119,7 @@ label[for="color-picker"] {
   /* This property updates as the number of boxes scale*/
   grid-template-columns: repeat(5, 20%);
 }
+
 .box {
   background: #ccc;
   /* This property updates as the number of boxes scale*/
