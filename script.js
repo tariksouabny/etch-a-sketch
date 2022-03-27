@@ -11,6 +11,7 @@ if (debug) {
 
 const grid = document.querySelector(".etch-a-sketch");
 const gridBGColor = "#cccccc";
+
 let clearGrid = () => {
   grid.childNodes.forEach((element) => {
     if (element.style) {
@@ -21,9 +22,18 @@ let clearGrid = () => {
 
 const slider = document.querySelector("#slider");
 slider.addEventListener("input", (e) => {
-  numberOfColsRows = slider.value;
+  let numberOfColsRows = slider.value;
   const output = document.querySelector("#size-output");
   output.innerText = slider.value;
+  changeNumRowsCols(numberOfColsRows);
+  const colorPicker = document.querySelector("#color-picker");
+
+  const boxes = document.querySelectorAll(".box");
+  Array.from(boxes).forEach((element) => {
+    element.addEventListener("mouseover", (e) => {
+      element.style.backgroundColor = colorPicker.value;
+    });
+  });
 });
 
 const changeNumRowsCols = (numRowsCols) => {
@@ -45,3 +55,12 @@ const changeNumRowsCols = (numRowsCols) => {
     `grid-template-columns: repeat(${numRowsCols}, ${100 / numRowsCols}%)`
   );
 };
+
+const colorPicker = document.querySelector("#color-picker");
+
+const boxes = document.querySelectorAll(".box");
+Array.from(boxes).forEach((element) => {
+  element.addEventListener("mouseover", (e) => {
+    element.style.backgroundColor = colorPicker.value;
+  });
+});
