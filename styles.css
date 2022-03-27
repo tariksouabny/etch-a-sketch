@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap");
 *,
 ::before,
 ::after {
@@ -9,6 +11,9 @@
 body {
   --icon-size: 10vw;
   --main-img-size: 25vw;
+  --font-main: "Montserrat", sans-serif;
+  --font-accent: "Merriweather", serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 /* Prevent highlighting images */
@@ -34,7 +39,22 @@ header {
   background: #ffe457;
   min-height: 100vh;
   max-height: 100vh;
+  min-width: 100%;
+  max-width: 100%;
+  font-family: var(--font-main);
 }
+
+header h1 {
+  font-weight: bold;
+}
+
+header h4 {
+  font-family: var(--font-accent);
+  letter-spacing: 1px;
+  color: #444;
+  font-style: italic;
+}
+
 .header-main {
   display: flex;
   min-height: calc(100vh - var(--icon-size));
