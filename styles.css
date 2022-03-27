@@ -52,6 +52,12 @@ header h4 {
   gap: none;
 }
 
+.top {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
 .main-section {
   min-height: 100vh;
   max-height: 100vh;
